@@ -57,6 +57,20 @@ h2 {
   display: none;
   margin-bottom: 100px;
   font-size: 180%;
+  width: 600px;
+  padding: 8px;
+  border: 3px solid #af0049;
+  background-color: rgba(255, 255, 255, 0.739);
+  border-style: double;
+  border-radius: 50px;
+  margin: auto;
+}
+
+.showTayAnswer, .showYeAnswer, .yaGoofed {
+  display: none;
+  margin-top: 50%;
+  margin-bottom: 100px;
+  font-size: 180%;
   width: 500px;
   padding: 8px;
   border: 3px solid #af0049;
@@ -64,10 +78,13 @@ h2 {
   border-style: double;
   border-radius: 50px;
   margin: auto;
-  margin-bottom: 50px;
 }
 
-#btn, #btnYe, #btnTay {
+.yeOrTay, #btnReset {
+  display: none;
+}
+
+#btn, #btnYe, #btnTay, #btnReset {
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;
@@ -80,14 +97,11 @@ h2 {
   box-shadow: 0 9px rgba(143, 143, 143, 0.849);
 }
 
-#btn:hover, #btnYe:hover, #btnTay:hover {background-color: rgb(212, 38, 110)}
+#btn:hover, #btnYe:hover, #btnTay:hover, #btnReset:hover {background-color: rgb(212, 38, 110)}
 
-#btn:active, #btnYe:active, #btnTay:active {
+#btn:active, #btnYe:active, #btnTay:active, #btnReset:active {
   background-color: rgb(212, 38, 110);
   box-shadow: 0 5px rgba(123, 123, 123, 0.849);
   transform: translateY(4px);
 }
 
-.yeOrTay {
-  display: none;
-}

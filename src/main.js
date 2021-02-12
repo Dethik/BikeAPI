@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import { KanyeQuote, TaylorQuote } from "./js/quotegenerator.js";
 
-
 function getKQuote(response) {
   if (response) {
     $(".showQuote").text(`${response}`);
@@ -14,7 +13,6 @@ function getKQuote(response) {
     $(".showErrors").text(`${response}`);
   }
 }
-
 function getTQuote(response) {
   if (response) {
     $(".showQuote").text(`${response}`);
@@ -23,7 +21,6 @@ function getTQuote(response) {
     $(".showErrors").text(`${response}`);
   }
 }
-
 function randomQuote(roll) {
   if (roll == 1) {
     KanyeQuote.getKQuote().then(function (response) {
@@ -37,20 +34,18 @@ function randomQuote(roll) {
     })
   }
 }
-
 function tay(roll) {
   if (roll == 2) {
-    true
+    return true
   } else {
-    false
+    return false
   }
 }
-
 function ye(roll) {
   if (roll == 1) {
-    true
+    return true
   } else {
-    false
+    return false
   }
 }
 
@@ -66,13 +61,23 @@ $(document).ready(function () {
   $("#btnTay").click(function () {
     $(".yeOrTay").hide();
     $("h1").hide();
-    tay();
-    console.log(tay())
+    if (tay(roll) == true) {
+      $(".showTayAnswer").show();
+      $("#btnReset").show();
+    } else {
+      $(".yaGoofed").show();
+      $("#btnReset").show();
+    }
   })
   $("#btnYe").click(function () {
     $(".yeOrTay").hide();
     $("h1").hide();
-    ye();
-    console.log(ye())
+    if (ye(roll) == true) {
+      $(".showYeAnswer").show();
+      $("#btnReset").show();
+    } else {
+      $(".yaGoofed").show();
+      $("#btnReset").show();
+    }
   })
-})
+});
